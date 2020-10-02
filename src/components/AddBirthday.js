@@ -1,5 +1,6 @@
 import React , { Component } from 'react'
-import { Form, Container, Button, FormGroup, Label, Input,Col} from 'reactstrap'
+import firebase from '../firebase'
+import { Form, FormGroup, Label, Input,Col} from 'reactstrap'
 class AddBirthday extends Component {
     constructor(){
         super();
@@ -22,14 +23,17 @@ class AddBirthday extends Component {
     handleChange = e =>{
         console.log(JSON.stringify(this.state));
         e.preventDefault();
+        let obj = firebase.database().ref('Birthday');
+        const item = {
+            name : this.state.name,
+            dob : this.state.dob,
+        };
+        obj.push(item);
+       
         this.setState({
             name : "",
             dob : ""
         })
-        // this.setState({
-        //     name: "",
-        //     dob: ""
-        // })
     }
     render() {
         return(
