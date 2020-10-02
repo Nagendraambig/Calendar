@@ -1,6 +1,6 @@
 import firebase from 'firebase'
 
-const firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyAChDHjIZ85y9OEe1OyObFyvAwjIzHYAxw",
     authDomain: "calendar-7c2e9.firebaseapp.com",
     databaseURL: "https://calendar-7c2e9.firebaseio.com",
@@ -11,6 +11,6 @@ const firebaseConfig = {
     measurementId: "G-PFKBVKFYQL"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  var fire = firebase.initializeApp(firebaseConfig);
 
-  export default firebase
+  export default fire

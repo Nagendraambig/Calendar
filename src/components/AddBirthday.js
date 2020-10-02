@@ -59,8 +59,10 @@ class AddBirthday extends Component {
                             Save
                         </Button>
                         <Button><a href="/calendar">View Calender</a></Button> */}
-                        <button onClick = {this.handleChange}>Save</button>
-                        <button><a href="/calendar">Calendar</a></button>
+                        <Col sm={6}>
+                            <button onClick = {this.handleChange}>Save</button>
+                            <button><a href="/calendar">Calendar</a></button>
+                        </Col>
                         {/* <button style={{ "backgroundColor": "yellow" }} id="add" onClick={this.addField}>Add More</button>
                   <button style={{ "backgroundColor": "yellow" }} id="cal" onClick={this.calendar}>Go to calendar</button>
                   <button style={{ "float": "right" }} id="save" onClick={this.saveData}>Save!</button> */}
